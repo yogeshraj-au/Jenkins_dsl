@@ -14,10 +14,14 @@ pipelineJob("$basePath/status") {
           remote {
             url(repo)
           }
-          branch("master")
+          withCredentials(bindings: 'ef28acbe-2b70-4d27-bc4e-e705887d4a85')
+          branch("*/master")
         }
       }
-      script(readFileFromWorkspace('SharedLibrary_audittools\Jenkinsfile'))
+      script(readFileFromWorkspace('Jenkins_examplegroovy_scripts\SharedLibrary_audittools\Jenkinsfile'))
     }
   }
 }
+
+
+checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'ef28acbe-2b70-4d27-bc4e-e705887d4a85', url: 'https://github.com/yogeshraj-au/Jenkins_examplegroovy_scripts.git']]])
