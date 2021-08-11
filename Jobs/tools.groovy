@@ -1,4 +1,4 @@
-pipelineJob("dsljobs/toolsaudit") {
+pipelineJob("dsljobs/toolaudit") {
     definition {
         cpsScm {
             scm {
