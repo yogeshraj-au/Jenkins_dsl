@@ -1,10 +1,9 @@
-String basePath = 'dsljobs'
-
-folder(basePath) {
-  description 'DSL generated folder.'
+folder('dsljobs') {
+    displayName('dsljobs')
+    description('Folder for dsl jobs')
 }
 
-pipelineJob("$basepath/github-demo") {
+pipelineJob("dsljobs/github-demo") {
     definition {
         cpsScm {
             scm {
