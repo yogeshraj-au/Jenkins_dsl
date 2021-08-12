@@ -1,4 +1,4 @@
-pipelineJob("dsljobs/toolaudit") {
+pipelineJob("dsljobs/parameterizedbuild") {
     definition {
         cpsScm {
             scm {
@@ -10,7 +10,7 @@ pipelineJob("dsljobs/toolaudit") {
                  branch('*/master')
                 }
             }
-            scriptPath('SharedLibrary_audittools/Jenkinsfile')
+            scriptPath('Pipeline_Parameterizedjob/Jenkinsfile')
         }
     }
 }
