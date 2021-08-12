@@ -1,4 +1,4 @@
-pipelineJob("dsljobs/cicd") {
+pipelineJob("dsljobs/samplecicd") {
     definition {
         cpsScm {
             scm {
